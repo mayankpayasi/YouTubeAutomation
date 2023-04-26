@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true"
-          name="C:/Users/kumar/IdeaProjects/YouTube/src/test/java/org/example/AppTest.java">
-        <classes/>
+    <test verbose="2" preserve-order="true" name="/Users/saurabhkansal/IdeaProjects/YouTubeAutomation/.idea">
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="url" value="https://www.youtube.com/"></parameter>
+        <classes>
+            <class name="org.example.YouTubeHomePageTest"></class>
+            <class name="org.example.YouTubeSearchResultsPageTest"></class>
+            <class name="org.example.YouTubeVideoPlayerPageTest"/>
+        </classes>
     </test>
 </suite>

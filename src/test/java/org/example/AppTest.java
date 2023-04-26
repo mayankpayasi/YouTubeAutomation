@@ -1,3 +1,4 @@
+/*
 package org.example;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -70,12 +71,10 @@ public class AppTest {
 
     }
 
-
-
-
     @AfterClass
     void closeDriver () {
         driver.close();
     }
 
 }
+*/
