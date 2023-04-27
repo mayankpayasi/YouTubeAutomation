@@ -13,13 +13,11 @@ public class RenamePlaylistPage {
     }
 
     private By libraryButton = By.xpath("//*[@id=\"guide-icon\"]");
-    private By libraryMenu = By.xpath("//*[@id=\"items\"]/ytd-guide-section-renderer[2]");
-    private By playlistLink = By.xpath("//a[@title='My Playlist']");
-    private By playlistTitle = By.xpath("//yt-formatted-string[@class='style-scope ytd-playlist-sidebar-primary-info-renderer']");
-    private By editPlaylistButton = By.xpath("//yt-icon[@class='style-scope ytd-playlist-sidebar-primary-info-renderer']");
+    private By libraryMenu = By.xpath("(//a[@id='endpoint']/tp-yt-paper-item/yt-formatted-string)[9]");
+    private By editPlaylistButton = By.xpath("//*[@id=\"edit-button\"]/yt-button-shape/button/yt-touch-feedback-shape/div/div[2]");
 
-    private By playlistNameInput = By.xpath("//div[@id='container']//ytd-playlist-sidebar-primary-info-renderer//input[@id='editable-title']");
-    private By saveButton = By.xpath("//div[@id='container']//ytd-playlist-sidebar-primary-info-renderer//yt-icon-button//button[@id='button']");
+    private By playlistNameInput = By.xpath("//*[@id=\"input-3\"]/input");
+    private By saveButton = By.xpath("//*[@id=\"save-button\"]/yt-button-shape/button/yt-touch-feedback-shape/div/div[2]");
 
     public void renamePlaylist(String oldPlaylistName, String newPlaylistName) throws InterruptedException {
         Actions actions = new Actions(driver);
@@ -30,34 +28,21 @@ public class RenamePlaylistPage {
         Thread.sleep(2000);
 
         WebElement libraryMenuElement = driver.findElement(libraryMenu);
-        WebElement playlistLinkElement = null;
+        actions.moveToElement(libraryMenuElement).click().perform();
+        Thread.sleep(2000);
 
-        // Find the playlist link and click it
-        for (WebElement element : libraryMenuElement.findElements(By.tagName("a"))) {
-            if (element.getAttribute("title").equals(oldPlaylistName)) {
-                playlistLinkElement = element;
-                break;
-            }
-        }
+        // Click the edit playlist button and update playlist name
+        WebElement editPlaylistButtonElement = driver.findElement(editPlaylistButton);
+        actions.moveToElement(editPlaylistButtonElement).click().perform();
+        Thread.sleep(1000);
 
-        if (playlistLinkElement != null) {
-            actions.moveToElement(playlistLinkElement).click().perform();
-            Thread.sleep(2000);
+        WebElement playlistNameInputElement = driver.findElement(playlistNameInput);
+        playlistNameInputElement.clear();
+        playlistNameInputElement.sendKeys(newPlaylistName);
+        Thread.sleep(1000);
 
-            // Click the edit playlist button and update playlist name
-            WebElement playlistTitleElement = driver.findElement(playlistTitle);
-            WebElement editPlaylistButtonElement = driver.findElement(editPlaylistButton);
-            actions.moveToElement(playlistTitleElement).click().moveToElement(editPlaylistButtonElement).click().perform();
-            Thread.sleep(1000);
-
-            WebElement playlistNameInputElement = driver.findElement(playlistNameInput);
-            playlistNameInputElement.clear();
-            playlistNameInputElement.sendKeys(newPlaylistName);
-            Thread.sleep(1000);
-
-            WebElement saveButtonElement = driver.findElement(saveButton);
-            actions.moveToElement(saveButtonElement).click().perform();
-            Thread.sleep(2000);
-        }
+        WebElement saveButtonElement = driver.findElement(saveButton);
+        actions.moveToElement(saveButtonElement).click().perform();
+        Thread.sleep(2000);
     }
 }

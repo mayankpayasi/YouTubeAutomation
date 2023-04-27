@@ -8,6 +8,7 @@
             <class name="org.example.YouTubeHomePageTest"></class>
             <class name="org.example.YouTubeSearchResultsPageTest"></class>
             <class name="org.example.YouTubeVideoPlayerPageTest"/>
+            <class name="org.example.RenamePlaylistPageTest"></class>
             <class name="org.example.DeletePlaylistPageTest"></class>
         </classes>
     </test>
