@@ -5,8 +5,8 @@ import org.openqa.selenium.WebDriver;
 
 public class LogoutPage {
     private WebDriver driver;
-    private By avatarButton = By.xpath("//button[@aria-label='Account']");
-    private By signOutButton = By.xpath("//yt-formatted-string[text()='Sign out']");
+    private By avatarButton = By.xpath("//button[@id='avatar-btn']/yt-img-shadow/img");
+    private By signOutButton = By.xpath("(//div[@id='primary-text-container']/yt-formatted-string)[10]");
 
     public LogoutPage(WebDriver driver) {
         this.driver = driver;

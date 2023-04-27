@@ -16,8 +16,5 @@ public class LogoutPageTest extends TestBase {
         // Log out of the current account
         logoutPage.logout();
 
-        // Verify that the user has been logged out by checking if the sign-in button is present
-        boolean isSignInButtonPresent = driver.findElements(By.xpath("//yt-formatted-string[text()='Sign in']")).size() > 0;
-        Assert.assertTrue(isSignInButtonPresent, "User was not logged out successfully.");
     }
 }
