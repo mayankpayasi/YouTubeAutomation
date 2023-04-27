@@ -13,12 +13,13 @@ public class TestBase {
         // Set up ChromeDriver
         driver = new ChromeDriver();
     }
-
+/*
     @AfterSuite
     public void tearDown() {
         // Close the ChromeDriver
         driver.quit();
     }
 
+ */
 
 }
