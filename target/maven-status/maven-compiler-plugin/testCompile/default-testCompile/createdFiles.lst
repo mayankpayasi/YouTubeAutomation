@@ -3,5 +3,6 @@ org\example\RenamePlaylistPageTest.class
 org\example\LogoutPageTest.class
 org\example\DeletePlaylistPageTest.class
 org\example\TestBase.class
+org\example\YouTubeLoginPageTest.class
 org\example\YouTubeHomePageTest.class
 org\example\YouTubeSearchResultsPageTest.class

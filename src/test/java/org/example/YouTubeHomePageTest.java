@@ -17,8 +17,15 @@ public class YouTubeHomePageTest extends TestBase {
         Thread.sleep(2000);
         homePage.clickSignInButton();
 
-        // Fill in login credentials and submit
+        // Fill in wrong login credentials and submit
         YouTubeHomePage.YouTubeLoginPage loginPage = new YouTubeHomePage.YouTubeLoginPage(driver);
+        loginPage.enterEmail("wrongemail@example.com"); // enter wrong email ID
+        loginPage.clickEmailNextButton();
+        Thread.sleep(2000);
+
+        // Clear the wrong email ID and enter the correct email ID
+        loginPage.clearEmail();
+
         loginPage.enterEmail("Epamca3@gmail.com");
         loginPage.clickEmailNextButton();
         Thread.sleep(3000);
