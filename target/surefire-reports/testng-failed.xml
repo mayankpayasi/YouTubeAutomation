@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="/Users/saurabhkansal/IdeaProjects/YouTubeAutomation/.idea(failed)" verbose="0">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://www.youtube.com/"/>
+    <classes>
+      <class name="org.example.YouTubeSearchResultsPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="testSearch"/>
+        </methods>
+      </class> <!-- org.example.YouTubeSearchResultsPageTest -->
+      <class name="org.example.YouTubeVideoPlayerPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="testAddToPlaylist"/>
+        </methods>
+      </class> <!-- org.example.YouTubeVideoPlayerPageTest -->
+      <class name="org.example.RenamePlaylistPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="testRenamePlaylist"/>
+        </methods>
+      </class> <!-- org.example.RenamePlaylistPageTest -->
+      <class name="org.example.YouTubeHomePageTest">
+        <methods>
+          <include name="testSignIn"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- org.example.YouTubeHomePageTest -->
+      <class name="org.example.LogoutPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="testLogout"/>
+        </methods>
+      </class> <!-- org.example.LogoutPageTest -->
+    </classes>
+  </test> <!-- /Users/saurabhkansal/IdeaProjects/YouTubeAutomation/.idea(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->
