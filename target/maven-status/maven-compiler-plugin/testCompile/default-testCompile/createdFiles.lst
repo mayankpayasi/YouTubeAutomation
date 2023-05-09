@@ -1,1 +1,7 @@
-org/example/YouTubeHomePageTest.class
+org\example\YouTubeVideoPlayerPageTest.class
+org\example\RenamePlaylistPageTest.class
+org\example\LogoutPageTest.class
+org\example\DeletePlaylistPageTest.class
+org\example\TestBase.class
+org\example\YouTubeHomePageTest.class
+org\example\YouTubeSearchResultsPageTest.class

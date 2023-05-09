@@ -1,4 +1,7 @@
-org/example/YouTubeVideoPlayerPage.class
-org/example/YouTubeHomePage.class
-org/example/YouTubeSearchResultsPage.class
-org/example/YouTubeHomePage$YouTubeLoginPage.class
+org\example\LogoutPage.class
+org\example\YouTubeHomePage.class
+org\example\YouTubeVideoPlayerPage.class
+org\example\RenamePlaylistPage.class
+org\example\YouTubeHomePage$YouTubeLoginPage.class
+org\example\YouTubeSearchResultsPage.class
+org\example\DeletePlaylistPage.class
